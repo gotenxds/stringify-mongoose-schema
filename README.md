@@ -1,0 +1,1 @@
+# stringify-mongoose-schema
