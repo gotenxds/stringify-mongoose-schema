@@ -4,7 +4,7 @@ const wrapIfArray = (type, parsedType) => (isArray(type) ? `[${parsedType}]` : p
 const isSchema = val => val.constructor.name === 'Schema';
 
 const stringifySchemas = schemas => 
-map(schemas, (schema, schemaName) => {
+`{${map(schemas, (schema, schemaName) => {
   const json = JSON.stringify(omit(schema.tree, ['_id', 'id']), (key, value) => {
     if (isPlainObject(value) || (isArray(value) && isSchema(value[0]))) {
       if (isArray(value) || (value.type && !value.type.type && !isString(value.type))) {
@@ -26,6 +26,6 @@ map(schemas, (schema, schemaName) => {
   });
 
   return `"${schemaName}": ${json}`;
-}).join(',');
+}).join(',')}}`;
 
 module.exports = stringifySchemas;
