@@ -1,0 +1,10 @@
+node_modules
+coverage
+npm-debug.log
+logs
+.tmp
+.idea
+.vscode
+.nyc_output
+report.xml
+eslint.xml

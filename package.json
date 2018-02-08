@@ -1,0 +1,11 @@
+{
+  "name": "stringify-mongoose-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "David maurcher limkys - gotenxds",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
